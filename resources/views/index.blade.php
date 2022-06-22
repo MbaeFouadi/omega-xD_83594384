@@ -9,6 +9,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/udc.png">
 
     <title>Universite Des Comores</title>
   </head>
@@ -35,8 +36,8 @@
                       <a href="{{ route('fiche') }}" style="color:red;">Cliquez ici pour afficher votre fiche de renseignement</a></p>
                    </div>
                    <div class="col-md-6">
-                      <p style="text-align:center;" class="fiche"><a href="{{ route('fin_inscription') }}"  style="color:red;">Cliquez ici pour finaliser votre inscription</a><br><br>
-                      <a href="{{ route('photo_carte') }}"  style="color:red;">Cliquez ici pour televerser votre photo pour la carte d'étudiant</a></p>
+                      <p style="text-align:center;" class="fiche"><a href="{{ route('fin_inscription.index') }}"  style="color:red;">Cliquez ici pour finaliser votre inscription</a><br><br>
+                      <a href="{{ route('photo_cartes') }}"  style="color:red;">Cliquez ici pour televerser votre photo pour la carte d'étudiant</a></p>
                    </div>
                  </div>
                  <!-- <h5>Avis aux étudiants</h5>

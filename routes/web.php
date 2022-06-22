@@ -86,8 +86,10 @@ Route::post('/etudiant', [CandidatController::class,'candidat_an'])->name('reche
 Route::post('/autorisation_etudiant', [PostInscriptionController::class,'autorisation_an'])->name('autorisation_an');
 Route::resource('/autorisation', PostInscriptionController::class);
 Route::resource('/fiche', QuitusController::class);
-Route::get('/photo_carte',[CarteController::class,'index'])->name('photo_carte');
-Route::get('/fin_inscription',[FinInsController::class,'index'])->name('fin_inscription');
+Route::get('/photo_cartes',[CarteController::class,'index'])->name('photo_cartes');
+Route::post('/add_photo',[CarteController::class,'store'])->name('add_photo');
+// Route::get('/fin_inscription',[FinInsController::class,'index'])->name('fin_inscription');
+Route::resource('/fin_inscription', FinInsController::class);
 Route::post('/recherche_auto', [PostInscriptionController::class,'recherche_autorisation'])->name('recherche_auto');
 Route::get('/recherche_autorisation', function () {
 	   $s=DB::table('date_fin')->where('type',2)->orderByDesc('id_date')->first();

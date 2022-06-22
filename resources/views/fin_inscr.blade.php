@@ -9,6 +9,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/udc.png">
+
 
     <title>Université des Comores</title>
   </head>
@@ -19,18 +21,18 @@
           <div class="col-12">
             <div class="_form-08-main">
               <div class="_form-08-head">
-                <h2>Finaliser votre inscription</h2>
+                <h2>Finaliser votre inscription </h2>
                 @isset($message)
                     <div class="alert alert-danger col-md-12">{{ $message }}</div>
                 @endisset
-                <form method="POST" action="{{route('renseignement')}}">
+                <form method="POST" action="{{ route('fin_inscription.store') }}">
                 @csrf
               </div class="row">
               <div class="form-group col-md-4">
-                <input type="text" name="matricule" class="form-control" placeholder="Matricule" required="" aria-required="true">
+                <input type="text" name="nin" class="form-control" placeholder="Nin" required="" aria-required="true">
               </div>
               <div class="form-group col-md-4">
-                <input type="text" name="transaction" class="form-control" placeholder="Numero de transaction" required="" aria-required="true">
+                <input type="text" name="reference" class="form-control" placeholder="Numero de transaction" required="" aria-required="true">
               </div>
               <!-- <div class="form-group">
               <button type="submit" class="btn btn-sm btn-primary" >Validez</button>

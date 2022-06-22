@@ -9,6 +9,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="image/udc.png">
+
 
     <title>Université Des Comores</title>
   </head>
@@ -68,7 +70,7 @@
               <div class="row"  style="text-align: left;">
                 <div class="col-md-6">
                     @if($p==0)
-                    @if($type_recu==4 || $type_recu==5)
+                    <!-- @if($type_recu==4 || $type_recu==5)
                     <select class="form-control" name="niveau">
                         <option value="l1">Licence 1</option>
                         <option value="l2">Licence 2</option>
@@ -76,16 +78,16 @@
                         <option value="N4">Master 1</option>
                         <option value="N5">Master 2</option>
 
-                    </select>
-                    @elseif($type_recu==1)
+                    </select> -->
+                    @if($type_recu==1 || $type_recu==41 || $type_recu==51 )
                     <input type="hidden" value="l1" name="niveau" class="form-control"  id="inputEmail3">
-                    @elseif($type_recu==2)
+                    @elseif($type_recu==2 || $type_recu==42 || $type_recu==52)
                     <input type="hidden" value="l2" name="niveau" class="form-control"  id="inputEmail3">
-                    @elseif($type_recu==3)
+                    @elseif($type_recu==3 || $type_recu==43 || $type_recu==53 )
                     <input type="hidden" value="l3" name="niveau" class="form-control"  id="inputEmail3">
-                    @elseif($type_recu==6)
+                    @elseif($type_recu==6 || $type_recu==56)
                     <input type="hidden" value="N4" name="niveau" class="form-control"  id="inputEmail3">
-                    @elseif($type_recu==7)
+                    @elseif($type_recu==7 || $type_recu==57)
                     <input type="hidden" value="N5" name="niveau" class="form-control"  id="inputEmail3">
                     </div>
                 </div>

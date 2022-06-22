@@ -102,18 +102,18 @@ class QuitusController extends Controller
                         $composante=DB::table("faculte")->where("code_facult",$post->code_facult)->first();
                         $departement=DB::table("departement")->where("code_depart",$post->code_depart)->first();
                         $niveau=DB::table("niveau")->where("code_niv",$post->code_niv)->first();
-                        $carte=DB::table('carte')->insert([
-                            "matricule"=>$post->matricule,
-                            "nom"=>$post->nom,
-                            "prenom"=>$post->prenom,
-                            "date_nais"=>$post->date_naiss,
-                            "lieu_nais"=>$post->lieu_naiss,
-                            "faculte"=>$composante->design_facult,
-                            "departement"=>$departement->design_depart,
-                            "niveau"=>$niveau->intit_niv,
-                            "annee"=>$post->Annee,
-                            "Photo"=>$post->matricule,
-                        ]);
+                        // $carte=DB::table('carte')->insert([
+                        //     "matricule"=>$post->matricule,
+                        //     "nom"=>$post->nom,
+                        //     "prenom"=>$post->prenom,
+                        //     "date_nais"=>$post->date_naiss,
+                        //     "lieu_nais"=>$post->lieu_naiss,
+                        //     "faculte"=>$composante->design_facult,
+                        //     "departement"=>$departement->design_depart,
+                        //     "niveau"=>$niveau->intit_niv,
+                        //     "annee"=>$post->Annee,
+                        //     "Photo"=>$post->matricule,
+                        // ]);
                         // $nin=Cookie::get('nin');
                         // $post=DB::table("post_inscription")->where("nin",$nin)->where("Annee",$annee)->first();
                         $data = DB::table('inscription')
@@ -185,6 +185,7 @@ class QuitusController extends Controller
                             'Date_preinscr'=>$candidat->datePrescript,
                             'An_Univ'=>$post->Annee,
                             'date_j'=>$date,
+                            'profession'=>$candidat->pro
                         ]);
                     }
                     $ins=$post->num_auto."/".$annee->Annee;
@@ -208,18 +209,18 @@ class QuitusController extends Controller
                     $departement=DB::table("departement")->where("code_depart",$post->code_depart)->first();
                     $niveau=DB::table("niveau")->where("code_niv",$post->code_niv)->first();
                     $et=DB::table("etudiant")->where("NIN",$post->nin)->first();
-                    $carte=DB::table('carte')->insert([
-                        "matricule"=>$et->mat_etud,
-                        "nom"=>$post->nom,
-                        "prenom"=>$post->prenom,
-                        "date_nais"=>$post->date_naiss,
-                        "lieu_nais"=>$post->lieu_naiss,
-                        "faculte"=>$composante->design_facult,
-                        "departement"=>$departement->design_depart,
-                        "niveau"=>$niveau->intit_niv,
-                        "annee"=>$post->Annee,
-                        "Photo"=>$et->mat_etud,
-                    ]);
+                    // $carte=DB::table('carte')->insert([
+                    //     "matricule"=>$et->mat_etud,
+                    //     "nom"=>$post->nom,
+                    //     "prenom"=>$post->prenom,
+                    //     "date_nais"=>$post->date_naiss,
+                    //     "lieu_nais"=>$post->lieu_naiss,
+                    //     "faculte"=>$composante->design_facult,
+                    //     "departement"=>$departement->design_depart,
+                    //     "niveau"=>$niveau->intit_niv,
+                    //     "annee"=>$post->Annee,
+                    //     "Photo"=>$et->mat_etud,
+                    // ]);
 
                     $data = DB::table('inscription')
                     ->join('etudiant', 'inscription.mat_etud', '=', 'etudiant.mat_etud')
@@ -296,18 +297,18 @@ class QuitusController extends Controller
                         $composante=DB::table("faculte")->where("code_facult",$post->code_facult)->first();
                         $departement=DB::table("departement")->where("code_depart",$post->code_depart)->first();
                         $niveau=DB::table("niveau")->where("code_niv",$post->code_niv)->first();
-                        $carte=DB::table('carte')->insert([
-                            "matricule"=>$post->matricule,
-                            "nom"=>$post->nom,
-                            "prenom"=>$post->prenom,
-                            "date_nais"=>$post->date_naiss,
-                            "lieu_nais"=>$post->lieu_naiss,
-                            "faculte"=>$composante->design_facult,
-                            "departement"=>$departement->design_depart,
-                            "niveau"=>$niveau->intit_niv,
-                            "annee"=>$post->Annee,
-                            "Photo"=>$post->matricule,
-                        ]);
+                        // $carte=DB::table('carte')->insert([
+                        //     "matricule"=>$post->matricule,
+                        //     "nom"=>$post->nom,
+                        //     "prenom"=>$post->prenom,
+                        //     "date_nais"=>$post->date_naiss,
+                        //     "lieu_nais"=>$post->lieu_naiss,
+                        //     "faculte"=>$composante->design_facult,
+                        //     "departement"=>$departement->design_depart,
+                        //     "niveau"=>$niveau->intit_niv,
+                        //     "annee"=>$post->Annee,
+                        //     "Photo"=>$post->matricule,
+                        // ]);
                         // $nin=Cookie::get('nin');
                         // $post=DB::table("post_inscription")->where("nin",$nin)->where("Annee",$annee)->first();
                         $data = DB::table('inscription')
@@ -381,6 +382,7 @@ class QuitusController extends Controller
                             'Date_preinscr'=>$candidat->datePrescript,
                             'An_Univ'=>$post->Annee,
                             'date_j'=>$date,
+                            'profession'=>$candidat->pro,
                         ]);
                     }
 
@@ -405,18 +407,18 @@ class QuitusController extends Controller
                     $departement=DB::table("departement")->where("code_depart",$post->code_depart)->first();
                     $niveau=DB::table("niveau")->where("code_niv",$post->code_niv)->first();
                     $et=DB::table("etudiant")->where("NIN",$post->nin)->first();
-                    $carte=DB::table('carte')->insert([
-                        "matricule"=>$et->mat_etud,
-                        "nom"=>$post->nom,
-                        "prenom"=>$post->prenom,
-                        "date_nais"=>$post->date_naiss,
-                        "lieu_nais"=>$post->lieu_naiss,
-                        "faculte"=>$composante->design_facult,
-                        "departement"=>$departement->design_depart,
-                        "niveau"=>$niveau->intit_niv,
-                        "annee"=>$post->Annee,
-                        "Photo"=>$et->mat_etud,
-                    ]);
+                    // $carte=DB::table('carte')->insert([
+                    //     "matricule"=>$et->mat_etud,
+                    //     "nom"=>$post->nom,
+                    //     "prenom"=>$post->prenom,
+                    //     "date_nais"=>$post->date_naiss,
+                    //     "lieu_nais"=>$post->lieu_naiss,
+                    //     "faculte"=>$composante->design_facult,
+                    //     "departement"=>$departement->design_depart,
+                    //     "niveau"=>$niveau->intit_niv,
+                    //     "annee"=>$post->Annee,
+                    //     "Photo"=>$et->mat_etud,
+                    // ]);
 
 
                     $data = DB::table('inscription')

@@ -9,7 +9,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-
+    <link rel="shortcut icon" href="image/udc.png">
+    
     <title>Universite Des Comores</title>
   </head>
   <body>
