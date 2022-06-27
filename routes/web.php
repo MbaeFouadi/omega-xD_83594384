@@ -37,11 +37,22 @@ Route::get('/', function () {
 
     $s=DB::table('date_fin')->where('type',2)->orderByDesc('id_date')->first();
     $dt = new DateTime();
+    // $dt->add(new DateInterval('P6D'));
     $date= $dt->format('Y-m-d');
     $nin=Cookie::get('nin');
     $post=DB::table("post_inscription")->where("nin",$nin)->first();
     return view('index',compact('post','date','s'));
 })->name('accueil');
+Route::get('/carte_jour', function () {
+
+    $s=DB::table('date_fin')->where('type',2)->orderByDesc('id_date')->first();
+    $dt = new DateTime();
+    // $dt->add(new DateInterval('P6D'));
+    $date= $dt->format('Y-m-d');
+    $nin=Cookie::get('nin');
+    $post=DB::table("post_inscription")->where("nin",$nin)->first();
+    return view('carte_jour',compact('date','s'));
+})->name('carte_jour');
 
 Route::get('/accepturl', function () {
 
@@ -87,6 +98,7 @@ Route::post('/autorisation_etudiant', [PostInscriptionController::class,'autoris
 Route::resource('/autorisation', PostInscriptionController::class);
 Route::resource('/fiche', QuitusController::class);
 Route::get('/photo_cartes',[CarteController::class,'index'])->name('photo_cartes');
+
 Route::post('/add_photo',[CarteController::class,'store'])->name('add_photo');
 // Route::get('/fin_inscription',[FinInsController::class,'index'])->name('fin_inscription');
 Route::resource('/fin_inscription', FinInsController::class);

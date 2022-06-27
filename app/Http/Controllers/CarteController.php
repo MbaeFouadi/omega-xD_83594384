@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use DateInterval;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -67,7 +69,16 @@ class CarteController extends Controller
 
                 /* Store $imageName name in DATABASE from HERE */
                 $message="téléversement de la photo a été effectué avec succès ";
-                return view("carte",compact("message"));
+
+                $carte= DB::table("carte")
+                ->where("matricule",$request->matricule)
+                ->where("annee",$annee->Annee)
+                ->first();
+
+                $dt = new DateTime();
+                $dt->add(new DateInterval('P7D'));
+                $date= $dt->format('Y-m-d');
+                return view("carte_jour",compact("date","carte"));
             } else {
                 $message = "Vous avez dejà une photo";
                 return view("carte",compact("message"));

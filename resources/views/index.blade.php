@@ -26,7 +26,7 @@
               @if($s->date_fin >= $date )
               <div class="form-group">
                 <div class="_btn_04" >
-                  <a href="{{ route('choix') }}">Débuter l'inscription </a>
+                  <a href="{{ route('choix') }}">Débuter l'inscription</a>
                 </div>
                 <hr>
                <div class="container" >
