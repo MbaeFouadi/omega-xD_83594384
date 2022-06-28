@@ -81,7 +81,7 @@ class QuitusController extends Controller
                          $post=DB::table("post_inscription")->where("nin",$nin)->where("Annee",$annee->Annee)->first();
                          $etud = DB::table('etudiant')
                         ->where("mat_etud",$post->matricule)
-                        ->update(['NIN' => $post->nin,"Tel_Etud"=>$post->tel_mobile,"date_j"=>$dateJ]);
+                        ->update(['NIN' => $post->nin,"Tel_Etud"=>$post->tel_mobile,"date_j"=>$dateJ,'profession'=> $post->pro]);
                         $ins=$post->num_auto."/".$annee->Annee;
                         $inscri=DB::table("inscription")->insert([
                             "Num_Inscrip"=>$ins,
@@ -132,7 +132,7 @@ class QuitusController extends Controller
                         return view ("fiche",compact("message",'data',"post",'datas'));
                     }
                     else{
-                        $message="vous etes deja inscris cette année";
+                        $message="vous êtes deja inscris cette année";
                         $nin=Cookie::get('nin');
                         $post=DB::table("post_inscription")->where("nin",$nin)->first();
                         return view ("success",compact("message",'post'));
@@ -276,7 +276,7 @@ class QuitusController extends Controller
                          $post=DB::table("post_inscription")->where("nin",$nin)->where("Annee",$annee->Annee)->first();
                          $etud = DB::table('etudiant')
                         ->where("mat_etud",$post->matricule)
-                        ->update(['NIN' => $post->nin,"Tel_Etud"=>$post->tel_mobile,"date_j"=>$dateJ]);
+                        ->update(['NIN' => $post->nin,"Tel_Etud"=>$post->tel_mobile,"date_j"=>$dateJ,'profession'=> $post->pro]);
                         $ins=$post->num_auto."/".$annee->Annee;
                         $inscri=DB::table("inscription")->insert([
                             "Num_Inscrip"=>$ins,

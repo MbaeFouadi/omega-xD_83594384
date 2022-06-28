@@ -676,8 +676,7 @@ class PostInscriptionController extends Controller
                             'droit' => $candidat->udc,
                             'droit_lettre' => $candidat->lettre,
                             'matricule' => $mat,
-                            'Annee' => $annees,
-                            'pro' => $candidat->pro
+                            'Annee' => $annees
                         ]);
 
                         Cookie::queue('nin', $request->nin, 10);
@@ -734,8 +733,7 @@ class PostInscriptionController extends Controller
                             'droit' => $candidat->udc,
                             'droit_lettre' => $candidat->lettre,
                             'matricule' => $mat,
-                            'Annee' => $annees,
-                            'pro' => $candidat->pro
+                            'Annee' => $annees
                         ]);
 
                         Cookie::queue('nin', $request->nin, 10);
@@ -791,8 +789,8 @@ class PostInscriptionController extends Controller
                             'tel_mobile' => $candidat->tel_mobile,
                             'droit' => $candidat->udc,
                             'droit_lettre' => $candidat->lettre,
-                            'Annee' => $annees,
-                            'pro' => $candidat->pro
+
+                            'Annee' => $annees
                         ]);
 
                         Cookie::queue('nin', $request->nin, 10);
@@ -847,8 +845,8 @@ class PostInscriptionController extends Controller
                             'tel_mobile' => $candidat->tel_mobile,
                             'droit' => $candidat->udc,
                             'droit_lettre' => $candidat->lettre,
-                            'Annee' => $annees,
-                            'pro' => $candidat->pro
+
+                            'Annee' => $annees
                         ]);
 
                         Cookie::queue('nin', $request->nin, 10);
@@ -991,9 +989,9 @@ class PostInscriptionController extends Controller
             // ->orderByDesc("annee")
             // ->first();
 
-            $ni = DB::table("montant")
+            $n = DB::table("montant")
                 ->join("etudiant","montant.statut","etudiant.profession")
-                ->select("montant.*","etudiant.profession as profession","etudiant.mat_etud as mat_etud")
+                ->select("montant.*","etudiant.*")
                 ->where("montant.code_niv", $n)
                 ->where("mat_etud",$request->matricule)
                 ->first();
@@ -1027,12 +1025,12 @@ class PostInscriptionController extends Controller
                             'date_naiss' => $date_naiss,
                             'statut' => 2,
                             'code_depart' => $inscription1->code_depart,
-                            'code_niv' =>  $ni->code_niv,
+                            'code_niv' =>  $n->code_niv,
                             'date_delivrance_fiche' => $date,
                             'code_facult' => $code_fac,
                             'tel_mobile' => $etudiant->Tel_Etud,
-                            'droit' =>  $ni->Montant_chiffre,
-                            'droit_lettre' => $ni->Montant_lettre,
+                            'droit' =>  $n->Montant_chiffre,
+                            'droit_lettre' => $n->Montant_lettre,
                             'matricule' => $mat,
                             'Annee' => $annees
                         ]);
@@ -1083,11 +1081,11 @@ class PostInscriptionController extends Controller
                             'date_naiss' => $date_naiss,
                             'statut' => 2,
                             'code_depart' => $inscription1->code_depart,
-                            'code_niv' =>  $ni->code_niv,
+                            'code_niv' =>  $n->code_niv,
                             'date_delivrance_fiche' => $date,
                             'code_facult' => $code_fac,
                             'tel_mobile' => $etudiant->Tel_Etud,
-                            'droit' =>  $ni->Montant_chiffre,
+                            'droit' =>  $n->Montant_chiffre,
                             'droit_lettre' =>  $n->Montant_lettre,
                             'matricule' => $mat,
                             'Annee' => $annees
