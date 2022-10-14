@@ -26,18 +26,18 @@
               @if($s->date_fin >= $date )
               <div class="form-group">
                 <div class="_btn_04" >
-                  <a href="{{ route('choix') }}">Débuter l'inscription</a>
+                  <a href="{{ route('choix') }}">Débuter l'inscription </a>
                 </div>
                 <hr>
                <div class="container" >
                  <div class="row" >
                    <div class="col-md-6">
                       <p style="text-align:center" class="fiche"><a href="{{ route('auto') }}" style="color:red;">Cliquez ici si vous avez déjà une fiche d'autorisation</a><br><br>
-                      <a href="{{ route('fiche') }}" style="color:red;">Cliquez ici pour afficher votre fiche de renseignement</a></p>
+                      <a href="{{ route('fiche') }}" style="color:blue;">Cliquez ici pour afficher votre fiche de renseignement</a></p>
                    </div>
                    <div class="col-md-6">
-                      <p style="text-align:center;" class="fiche"><a href="{{ route('fin_inscription.index') }}"  style="color:red;">Cliquez ici pour finaliser votre inscription</a><br><br>
-                      <a href="{{ route('photo_cartes') }}"  style="color:red;">Cliquez ici pour televerser votre photo pour la carte d'étudiant</a></p>
+                      <!-- <p style="text-align:center;" class="fiche"><a href="{{ route('fin_inscription.index') }}"  style="color:red;">Cliquez ici pour finaliser votre inscription</a><br><br> -->
+                      <p style="text-align:center;" class="fiche"> <a href="{{ route('photo_cartes') }}"  style="color:red;">Cliquez ici pour televerser votre photo pour la carte d'étudiant</a></p> <br> <br>
                    </div>
                  </div>
                  <!-- <h5>Avis aux étudiants</h5>

@@ -91,20 +91,19 @@
             </div>
             @if( $s->date_fin >= $date )
             <div class="row">
-                <form method="post" action="{{ url('https://26901.tagpay.fr/online/online.php')}}" >
+                <form method="post" action="{{ url('https://26900.tagpay.fr/online/online.php')}}" >
                     @csrf
                     <input type="hidden" name="sessionid" value="{{ $sessionId }}">
-                    <input type="hidden" name="merchantid" value="2532345689566942">
+                    <input type="hidden" name="merchantid" value="2274832632922162">
                     <input type="hidden" name="amount"  value="{{$data->droit}}">
                     <input type="hidden" name="currency" value="174">
                     <input type="hidden" name="purchaseref" value=" {{$data->nin}}">
-                    <input type="hidden" name="accepturl" value="https://autorisation.univ-comores.km/accepturl">
-                    <input type="hidden" name="cancelurl" value="https://autorisation.univ-comores.km/cancelurl">
-                    <input type="hidden" name="declineurl" value="https://autorisation.univ-comores.km/declineurl">
+                    <input type="hidden" name="accepturl" value="https://auto.univ-comores.km/accepturl">
+                    <input type="hidden" name="cancelurl" value="https://auto.univ-comores.km/cancelurl">
+                    <input type="hidden" name="declineurl" value="https://auto.univ-comores.km/declineurl">
                     <input type="submit" class="btn btn-sm btn-primary" name="ok" value="Payer via Holo">
                     <a href="{{route('accueil')}}" class="btn btn-sm btn-primary">Payer après</a>
                 </form>
-               
             </div>
             @endif
               <!-- <div class="form-group">

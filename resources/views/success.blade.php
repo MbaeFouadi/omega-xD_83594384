@@ -23,7 +23,7 @@
                @if(Cookie::get('nin') !== null)
                @if($s->date_fin >= $date )
               <div class="_form-08-head">
-                <h2>Bonjour {{ $post->nom}} {{ $post->prenom}}</h2>
+                <h2>Bonjour {{ $post->nom}} {{ $post->prenom}} {{ request()->has('paymentref') ? request()->get('paymentref') : 'Null' }}</h2>
               </div>
 
              

@@ -170,7 +170,7 @@ class PostInscriptionController extends Controller
                     $ch = curl_init();
                     // define options
                     $optArray = array(
-                        CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                        CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                         CURLOPT_RETURNTRANSFER => true
                     );
 
@@ -226,7 +226,7 @@ class PostInscriptionController extends Controller
                     $ch = curl_init();
                     // define options
                     $optArray = array(
-                        CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                        CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                         CURLOPT_RETURNTRANSFER => true
                     );
 
@@ -284,7 +284,7 @@ class PostInscriptionController extends Controller
                     $ch = curl_init();
                     // define options
                     $optArray = array(
-                        CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                        CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                         CURLOPT_RETURNTRANSFER => true
                     );
 
@@ -340,7 +340,7 @@ class PostInscriptionController extends Controller
                     $ch = curl_init();
                     // define options
                     $optArray = array(
-                        CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                        CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                         CURLOPT_RETURNTRANSFER => true
                     );
 
@@ -691,7 +691,7 @@ class PostInscriptionController extends Controller
                         $ch = curl_init();
                         // define options
                         $optArray = array(
-                            CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                            CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                             CURLOPT_RETURNTRANSFER => true
                         );
 
@@ -749,7 +749,7 @@ class PostInscriptionController extends Controller
                         $ch = curl_init();
                         // define options
                         $optArray = array(
-                            CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                            CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                             CURLOPT_RETURNTRANSFER => true
                         );
 
@@ -806,7 +806,7 @@ class PostInscriptionController extends Controller
                         $ch = curl_init();
                         // define options
                         $optArray = array(
-                            CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                            CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                             CURLOPT_RETURNTRANSFER => true
                         );
 
@@ -1048,7 +1048,7 @@ class PostInscriptionController extends Controller
                         $ch = curl_init();
                         // define options
                         $optArray = array(
-                            CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                            CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                             CURLOPT_RETURNTRANSFER => true
                         );
 
@@ -1088,7 +1088,7 @@ class PostInscriptionController extends Controller
                             'code_facult' => $code_fac,
                             'tel_mobile' => $etudiant->Tel_Etud,
                             'droit' =>  $ni->Montant_chiffre,
-                            'droit_lettre' =>  $n->Montant_lettre,
+                            'droit_lettre' =>  $ni->Montant_lettre,
                             'matricule' => $mat,
                             'Annee' => $annees
                         ]);
@@ -1103,7 +1103,7 @@ class PostInscriptionController extends Controller
                         $ch = curl_init();
                         // define options
                         $optArray = array(
-                            CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                            CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                             CURLOPT_RETURNTRANSFER => true
                         );
 
@@ -1150,7 +1150,7 @@ class PostInscriptionController extends Controller
                 $ch = curl_init();
                 // define options
                 $optArray = array(
-                    CURLOPT_URL => 'https://26900.tagpay.fr/online/online.php?merchantid=2274832632922162',
+                    CURLOPT_URL => 'https://26901.tagpay.fr/online/online.php?2532345689566942',
                     CURLOPT_RETURNTRANSFER => true
                 );
 

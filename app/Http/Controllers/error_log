@@ -1,0 +1,37 @@
+[11-Oct-2022 10:07:18 Africa/Casablanca] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/udc/public_html/fdse.univ-comores.km/fdse/profil_identite.php on line 3
+[11-Oct-2022 10:07:18 Africa/Casablanca] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/udc/public_html/fdse.univ-comores.km/fdse/profil_identite.php:1) in /home/udc/public_html/fdse.univ-comores.km/fdse/profil_identite.php on line 7
+[11-Oct-2022 10:07:22 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.e.prenom' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/etudiants.php on line 51
+[11-Oct-2022 10:07:22 Africa/Casablanca] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/udc/public_html/fdse.univ-comores.km/fdse/etudiants.php:266
+Stack trace:
+#0 {main}
+  thrown in /home/udc/public_html/fdse.univ-comores.km/fdse/etudiants.php on line 266
+[11-Oct-2022 10:07:30 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.departement.design_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 21
+[11-Oct-2022 10:07:30 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.departement.design_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 22
+[11-Oct-2022 10:07:30 Africa/Casablanca] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php:71
+Stack trace:
+#0 {main}
+  thrown in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 71
+[11-Oct-2022 10:07:54 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.departement.design_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 21
+[11-Oct-2022 10:07:54 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.departement.design_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 22
+[11-Oct-2022 10:07:54 Africa/Casablanca] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php:71
+Stack trace:
+#0 {main}
+  thrown in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 71
+[11-Oct-2022 10:08:26 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.departement.design_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 21
+[11-Oct-2022 10:08:26 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.departement.design_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 22
+[11-Oct-2022 10:08:26 Africa/Casablanca] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php:71
+Stack trace:
+#0 {main}
+  thrown in /home/udc/public_html/fdse.univ-comores.km/fdse/accueil.php on line 71
+[11-Oct-2022 10:10:31 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.empt.code_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/emploi_du_temp.php on line 35
+[11-Oct-2022 10:10:31 Africa/Casablanca] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/udc/public_html/fdse.univ-comores.km/fdse/emploi_du_temp.php:107
+Stack trace:
+#0 {main}
+  thrown in /home/udc/public_html/fdse.univ-comores.km/fdse/emploi_du_temp.php on line 107
+[11-Oct-2022 10:10:37 Africa/Casablanca] PHP Warning:  Invalid argument supplied for foreach() in /home/udc/public_html/fdse.univ-comores.km/fdse/nouveauEmploi.php on line 214
+[11-Oct-2022 10:10:41 Africa/Casablanca] PHP Warning:  Invalid argument supplied for foreach() in /home/udc/public_html/fdse.univ-comores.km/fdse/nouveauEmploi.php on line 214
+[11-Oct-2022 10:11:57 Africa/Casablanca] PHP Warning:  PDO::query(): SQLSTATE[42000]: Syntax error or access violation: 1055 Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'udc_fdse.empt.code_depart' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in /home/udc/public_html/fdse.univ-comores.km/fdse/emploi_du_temp.php on line 35
+[11-Oct-2022 10:11:57 Africa/Casablanca] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on bool in /home/udc/public_html/fdse.univ-comores.km/fdse/emploi_du_temp.php:107
+Stack trace:
+#0 {main}
+  thrown in /home/udc/public_html/fdse.univ-comores.km/fdse/emploi_du_temp.php on line 107
