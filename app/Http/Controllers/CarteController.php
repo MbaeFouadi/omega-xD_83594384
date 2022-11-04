@@ -147,8 +147,8 @@ class CarteController extends Controller
             ->join("faculte", "faculte.design_facult", "=", "carte.faculte")
             ->join("departement", "departement.design_depart", "=", "carte.departement")
             ->select("carte.*", "faculte.code_facult", "departement.code_depart")
-            ->where("faculte.code_facult", "=", $request->faculte)
-            ->where("departement.code_depart", "=", $request->departement)
+            // ->where("faculte.code_facult", "=", $request->faculte)
+            // ->where("departement.code_depart", "=", $request->departement)
             ->where("date", 'like', '%' . $request->dates . '%')
             ->where("etat", "=", 0)
             ->get();

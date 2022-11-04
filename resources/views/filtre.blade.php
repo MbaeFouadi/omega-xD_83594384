@@ -15,7 +15,7 @@
         <h1 class="text-center">Filtrage Ngazidja</h1> <br> <br>
         <form action="{{route('photo_ngazidja')}}" method="post">
             @csrf
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <select class="form-select" id="faculte" name="faculte" aria-label="Default select example" required>
                     <option selected value="">Composante</option>
                     @foreach ( $facultes as $faculte )
@@ -28,7 +28,7 @@
                     <option selected value="">Departement</option>
                  
                 </select>
-            </div> <br> 
+            </div> <br>  -->
             <div class="form-group">
                 <input type="date" name="dates"  class="form-control" id="" required>
             </div> <br>

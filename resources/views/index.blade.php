@@ -36,8 +36,8 @@
                       <a href="{{ route('fiche') }}" style="color:blue;">Cliquez ici pour afficher votre fiche de renseignement</a></p>
                    </div>
                    <div class="col-md-6">
-                      <!-- <p style="text-align:center;" class="fiche"><a href="{{ route('fin_inscription.index') }}"  style="color:red;">Cliquez ici pour finaliser votre inscription</a><br><br> -->
-                      <p style="text-align:center;" class="fiche"> <a href="{{ route('photo_cartes') }}"  style="color:red;">Cliquez ici pour televerser votre photo pour la carte d'étudiant</a></p> <br> <br>
+                      <p style="text-align:center;" class="fiche"><a href="{{ route('matricules') }}"  style="color:red;">Cliquez ici pour chercher votre matricule</a><br><br>
+                      <p style="text-align:center;" class="fiche"> <a href="{{ route('photo_cartes') }}"  style="color:blue;">Cliquez ici pour televerser votre photo pour la carte d'étudiant</a></p> <br> <br>
                    </div>
                  </div>
                  <!-- <h5>Avis aux étudiants</h5>

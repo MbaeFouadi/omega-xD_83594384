@@ -54,19 +54,6 @@ Route::get('/accepturl', function () {
     // return view('success',compact('post',"s","date"));
 
     $et=DB::table("etudiant")->where("NIN",$nin)->first();
-                    // $carte=DB::table('carte')->insert([
-                    //     "matricule"=>$et->mat_etud,
-                    //     "nom"=>$post->nom,
-                    //     "prenom"=>$post->prenom,
-                    //     "date_nais"=>$post->date_naiss,
-                    //     "lieu_nais"=>$post->lieu_naiss,
-                    //     "faculte"=>$composante->design_facult,
-                    //     "departement"=>$departement->design_depart,
-                    //     "niveau"=>$niveau->intit_niv,
-                    //     "annee"=>$post->Annee,
-                    //     "Photo"=>$et->mat_etud,
-                    // ]);
-
                     $data = DB::table('inscription')
                     ->join('etudiant', 'inscription.mat_etud', '=', 'etudiant.mat_etud')
                     ->select('inscription.*','etudiant.*')
@@ -83,22 +70,7 @@ Route::get('/accepturl', function () {
                 
 });
 
-// Route::get('/notification', function () {
 
-//     $Annee=DB::table('annee')->orderByDesc('id_annee')->first();
-//     $nin=Cookie::get('nin');
-//     $post=DB::table("post_inscription")->where("nin",$nin)->where("Annee",$Annee->Annee)->first();
-//     $s=DB::table('date_fin')->where('type',2)->orderByDesc('id_date')->first();
-//     $dt = new DateTime();
-//     $date= $dt->format('Y-m-d');
-//     $paymentref=$_GET['paymentref'];
-//     $purchaseref= substr($_GET['purchaseref'], 1);
-//     $ins_quitus=DB::table("Trans")->insert([
-//         "reference"=>$paymentref,
-//        "nin"=>$purchaseref
-//     ]);
-//     // return view('success',compact('post',"s","date"));
-// });
 
 Route::get('/accepturl_83594384', function () {
 
@@ -167,6 +139,29 @@ Route::get('/recherche_fiche', function () {
     return view('recherche_fiche');
 })->name('fiche');
 
+
+
+Route::get('/recherche_matricule', function () {
+    return view('recherche_matricule');
+})->name('matricules');
+
+Route::post('/matricule', function (Request $request) {
+   $mat=DB::table("etudiant")
+        ->where("NIN",$request->nin)
+        ->first();
+        if(isset($mat))
+        {
+            return view('matricule',compact("mat"));
+        }
+        else
+        {
+
+            $message="Vous n'êtes pas inscris à l'Université";
+            return view('recherche_matricule',compact("message"));
+
+        }
+})->name('matricule');
+
 Route::post('/fiche_renseignement', function (Request $request) {
     $data1 = DB::table('inscription')
         ->join('etudiant', 'inscription.mat_etud', '=', 'etudiant.mat_etud')
@@ -195,7 +190,7 @@ Route::post('/fiche_renseignement', function (Request $request) {
             }
             else
             {
-                $message="Vous n'etes pas inscris cette annee";
+                $message="Vous n'êtes pas inscris cette annee";
                 return view('recherche_fiche',compact('message'));
             }
 
